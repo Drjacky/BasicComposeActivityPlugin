@@ -14,23 +14,21 @@ repositories {
     }
 }
 
-// Read more: https://plugins.jetbrains.com/docs/intellij/tools-intellij-platform-gradle-plugin.html
 dependencies {
     intellijPlatform {
-        intellijIdea("2025.2.4")
-        testFramework(org.jetbrains.intellij.platform.gradle.TestFrameworkType.Platform)
+        androidStudio("2025.2.2.3")
 
-        // Add plugin dependencies for compilation here:
-
-
+        bundledPlugin("org.jetbrains.android")
         bundledPlugin("org.jetbrains.kotlin")
+        bundledPlugin("com.intellij.java")
     }
 }
 
 intellijPlatform {
     pluginConfiguration {
         ideaVersion {
-            sinceBuild = "252.25557"
+            sinceBuild = "241"
+            untilBuild = "253.*"
         }
 
         changeNotes = """
@@ -39,16 +37,6 @@ intellijPlatform {
     }
 }
 
-tasks {
-    // Set the JVM compatibility versions
-    withType<JavaCompile> {
-        sourceCompatibility = "21"
-        targetCompatibility = "21"
-    }
-}
-
 kotlin {
-    compilerOptions {
-        jvmTarget.set(org.jetbrains.kotlin.gradle.dsl.JvmTarget.JVM_21)
-    }
+    jvmToolchain(21)
 }

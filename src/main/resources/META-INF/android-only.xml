@@ -1,0 +1,8 @@
+<idea-plugin>
+    <depends>com.intellij.modules.androidstudio</depends>
+
+    <extensions defaultExtensionNs="com.android.tools.idea.wizard.template">
+        <wizardTemplateProvider
+                implementation="app.web.drjacky.basiccomposeactivityplugin.BasicComposeActivityTemplateProvider"/>
+    </extensions>
+</idea-plugin>
