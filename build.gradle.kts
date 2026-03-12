@@ -21,6 +21,8 @@ dependencies {
         bundledPlugin("org.jetbrains.android")
         bundledPlugin("org.jetbrains.kotlin")
         bundledPlugin("com.intellij.java")
+
+        zipSigner()
     }
 }
 
@@ -34,6 +36,16 @@ intellijPlatform {
         changeNotes = """
             Initial version
         """.trimIndent()
+    }
+
+    signing {
+        certificateChain = providers.environmentVariable("CERTIFICATE_CHAIN")
+        privateKey = providers.environmentVariable("PRIVATE_KEY")
+        password = providers.environmentVariable("PRIVATE_KEY_PASSWORD")
+    }
+
+    publishing {
+        token = providers.environmentVariable("PUBLISH_TOKEN")
     }
 }
 
