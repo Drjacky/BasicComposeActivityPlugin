@@ -1,7 +1,7 @@
 plugins {
     id("java")
-    id("org.jetbrains.kotlin.jvm") version "2.1.20"
-    id("org.jetbrains.intellij.platform") version "2.10.2"
+    id("org.jetbrains.kotlin.jvm") version "2.3.0"
+    id("org.jetbrains.intellij.platform") version "2.12.0"
 }
 
 group = "app.web.drjacky"
@@ -16,7 +16,7 @@ repositories {
 
 dependencies {
     intellijPlatform {
-        androidStudio("2025.2.2.3")
+        androidStudio("2025.3.2.6")
 
         bundledPlugin("org.jetbrains.android")
         bundledPlugin("org.jetbrains.kotlin")

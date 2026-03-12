@@ -2,7 +2,6 @@ package app.web.drjacky.basiccomposeactivityplugin
 
 import com.android.tools.idea.wizard.template.Category
 import com.android.tools.idea.wizard.template.FormFactor
-import com.android.tools.idea.wizard.template.ModuleTemplateData
 import com.android.tools.idea.wizard.template.PackageNameWidget
 import com.android.tools.idea.wizard.template.TemplateConstraint
 import com.android.tools.idea.wizard.template.TemplateData
@@ -33,13 +32,9 @@ val basicComposeActivityTemplate
                 .resolve("template_compose_empty_activity_material3.png")
         }
 
-        recipe = { data: TemplateData ->
-            val moduleData = data as ModuleTemplateData
-            PendingTemplateConfig.clear()
-            ProjectFileGenerator.generateAll(
-                projectRoot = moduleData.rootDir.parentFile,
-                projectName = moduleData.rootDir.parentFile.name,
-                packageName = packageName.value,
-            )
+        recipe = { _: TemplateData ->
+            // All file generation is handled by BasicComposeProjectSetupActivity
+            // after the project opens. This avoids conflicts with Android Studio's
+            // internal rendering pipeline (generateAndroidModule / CommonPluginsInserter).
         }
     }
