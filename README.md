@@ -1,7 +1,7 @@
 # Basic Compose Activity Plugin
 
 <p align="center">
-  <img src="art/plugin-icon.svg" width="300" height="300" alt="Basic Compose Activity Plugin" />
+  <img src="art/plugin-logo.png" width="300" height="300" alt="Basic Compose Activity Plugin" />
 </p>
 
 <p align="center">
@@ -65,4 +65,4 @@ Feel free to open an issue or submit a pull request for any bugs or improvements
 
 ## License
 
-
+This project is licensed under the Apache License 2.0 -- see the [LICENSE.md](LICENSE.md) file for details.
