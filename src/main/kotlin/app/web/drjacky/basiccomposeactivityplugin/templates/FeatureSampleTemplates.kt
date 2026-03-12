@@ -197,8 +197,8 @@ fun SampleListScreen(
 private fun SampleListScreenPreview() {
     SampleListScreen(
         items = listOf(
-            SampleItem(id = "1", title = "First item"),
-            SampleItem(id = "2", title = "Second item"),
+            SampleItem(id = "1", title = "Title1"),
+            SampleItem(id = "2", title = "Title2"),
         ),
         onAddClick = {},
     )
@@ -260,7 +260,7 @@ fun SampleItemRow(
 @Composable
 private fun SampleItemRowPreview() {
     SampleItemRow(
-        item = SampleItem(id = "1", title = "Sample item"),
+        item = SampleItem(id = "1", title = "Title1"),
     )
 }
 """.trimIndent()
@@ -410,11 +410,11 @@ class SampleViewModel @Inject constructor() : ViewModel() {
     }
 
     private fun defaultItems(): List<SampleItem> = listOf(
-        SampleItem(id = UUID.randomUUID().toString(), title = "Learn Jetpack Compose"),
-        SampleItem(id = UUID.randomUUID().toString(), title = "Set up Hilt DI"),
-        SampleItem(id = UUID.randomUUID().toString(), title = "Explore Navigation 3"),
-        SampleItem(id = UUID.randomUUID().toString(), title = "Write unit tests"),
-        SampleItem(id = UUID.randomUUID().toString(), title = "Configure detekt"),
+        SampleItem(id = UUID.randomUUID().toString(), title = "Title1"),
+        SampleItem(id = UUID.randomUUID().toString(), title = "Title2"),
+        SampleItem(id = UUID.randomUUID().toString(), title = "Title3"),
+        SampleItem(id = UUID.randomUUID().toString(), title = "Title4"),
+        SampleItem(id = UUID.randomUUID().toString(), title = "Title5"),
     )
 }
 """.trimIndent()
