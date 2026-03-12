@@ -16,6 +16,14 @@ import java.io.File
  * module renderer runs.  When the module renderer fails, our template's recipe
  * never executes.  This activity detects that situation and writes every file
  * that the recipe would have created.
+ *
+ * Detection: `build-logic/settings.gradle.kts` is unique to our template and
+ * is never created by the standard module rendering pipeline.  If it is absent
+ * the recipe hasn't run and we need to generate everything.
+ *
+ * Note: `generateCommonModule` creates a partial `app/` directory (including
+ * `app/build.gradle.kts`) before it crashes, so we cannot use that file for
+ * detection.  We delete the partial `app/` directory before regenerating.
  */
 class BasicComposeProjectSetupActivity : ProjectActivity {
 
@@ -24,17 +32,21 @@ class BasicComposeProjectSetupActivity : ProjectActivity {
     override suspend fun execute(project: Project) {
         val packageName = PendingTemplateConfig.consumeIfRecent() ?: return
 
-        // Small delay to let the rendering pipeline finish (or fail).
-        delay(2_000)
+        // Let the rendering pipeline finish (or fail) before we inspect the disk.
+        delay(3_000)
 
         val projectDir = File(project.basePath ?: return)
 
-        if (File(projectDir, "app/build.gradle.kts").exists()) return
-        if (File(projectDir, "build-logic").exists()) return
+        // build-logic is only created by our generator — if it exists, we're done.
+        if (File(projectDir, "build-logic/settings.gradle.kts").exists()) return
 
         val projectName = projectDir.name
 
-        logger.info("Generating Basic Compose Activity project files: $projectName ($packageName)")
+        logger.info("Generating Basic Compose Activity project: $projectName ($packageName)")
+
+        // Remove the partial app/ directory left by the failed generateCommonModule
+        // so our generator can write a clean version.
+        File(projectDir, "app").takeIf { it.exists() }?.deleteRecursively()
 
         ProjectFileGenerator.generateAll(projectDir, projectName, packageName)
 
