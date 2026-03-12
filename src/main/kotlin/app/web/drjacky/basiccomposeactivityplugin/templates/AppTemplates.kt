@@ -260,6 +260,7 @@ fun appColorsXml(): String = """
     <color name="colorPrimary">#6200EE</color>
     <color name="colorPrimaryDark">#3700B3</color>
     <color name="colorAccent">#FF009688</color>
+    <color name="ic_launcher_background">#FFFFFF</color>
 </resources>
 """.trimIndent()
 
@@ -285,4 +286,41 @@ fun appStylesNightXml(): String = """
     </style>
 
 </resources>
+""".trimIndent()
+
+fun proguardRules(): String = """
+# Add project specific ProGuard rules here.
+# You can control the set of applied configuration files using the
+# proguardFiles setting in build.gradle.kts.
+""".trimIndent()
+
+fun icLauncherForegroundXml(): String = """
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+  <path
+      android:fillColor="#3DDC84"
+      android:pathData="M0,0h108v108h-108z"/>
+  <path
+      android:fillColor="#FFFFFF"
+      android:pathData="M36.6,72.9L36.6,36L44.4,36L44.4,66L60,66L60,72.9Z"/>
+</vector>
+""".trimIndent()
+
+fun adaptiveIconXml(): String = """
+<?xml version="1.0" encoding="utf-8"?>
+<adaptive-icon xmlns:android="http://schemas.android.com/apk/res/android">
+    <background android:drawable="@color/ic_launcher_background"/>
+    <foreground android:drawable="@drawable/ic_launcher_foreground"/>
+</adaptive-icon>
+""".trimIndent()
+
+fun adaptiveIconRoundXml(): String = """
+<?xml version="1.0" encoding="utf-8"?>
+<adaptive-icon xmlns:android="http://schemas.android.com/apk/res/android">
+    <background android:drawable="@color/ic_launcher_background"/>
+    <foreground android:drawable="@drawable/ic_launcher_foreground"/>
+</adaptive-icon>
 """.trimIndent()

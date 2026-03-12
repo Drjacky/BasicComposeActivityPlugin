@@ -22,6 +22,7 @@ val basicComposeActivityTemplate
         screens = listOf(WizardUiContext.NewProject)
 
         val packageName = defaultPackageNameParameter
+        PendingTemplateConfig.store { packageName.value }
 
         widgets(
             PackageNameWidget(packageName),
@@ -33,8 +34,11 @@ val basicComposeActivityTemplate
         }
 
         recipe = { data: TemplateData ->
-            basicComposeActivityRecipe(
-                moduleData = data as ModuleTemplateData,
+            val moduleData = data as ModuleTemplateData
+            PendingTemplateConfig.clear()
+            ProjectFileGenerator.generateAll(
+                projectRoot = moduleData.rootDir.parentFile,
+                projectName = moduleData.rootDir.parentFile.name,
                 packageName = packageName.value,
             )
         }
