@@ -47,16 +47,7 @@ class BasicComposeProjectSetupActivity : ProjectActivity {
 
         ProjectFileGenerator.generateAll(projectDir, projectName, packageName)
 
-        withContext(Dispatchers.EDT) {
-            val localFs = LocalFileSystem.getInstance()
-            val vDir = localFs.refreshAndFindFileByPath(projectDir.absolutePath)
-            if (vDir != null) {
-                VfsUtil.markDirtyAndRefresh(false, true, true, vDir)
-                logger.info("VFS refreshed for $projectName")
-            } else {
-                logger.warn("Could not find VirtualFile for $projectDir")
-            }
-        }
+        refreshVfs(projectDir, projectName)
 
         delay(2_000)
 
@@ -65,6 +56,17 @@ class BasicComposeProjectSetupActivity : ProjectActivity {
         }
 
         logger.info("Basic Compose Activity project setup completed: $projectName")
+    }
+
+    private fun refreshVfs(projectDir: File, projectName: String) {
+        val localFs = LocalFileSystem.getInstance()
+        val vDir = localFs.refreshAndFindFileByPath(projectDir.absolutePath)
+        if (vDir != null) {
+            VfsUtil.markDirtyAndRefresh(true, true, true, vDir)
+            logger.info("VFS refresh scheduled for $projectName")
+        } else {
+            logger.warn("Could not find VirtualFile for $projectDir")
+        }
     }
 
     private fun triggerGradleSync() {
