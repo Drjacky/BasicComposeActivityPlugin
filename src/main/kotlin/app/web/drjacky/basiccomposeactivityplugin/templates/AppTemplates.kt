@@ -183,6 +183,7 @@ fun AppNavigation(
     modifier: Modifier = Modifier,
 ) {
     val backStack = rememberNavBackStack(SampleDestination.SampleList as NavKey)
+    val sampleViewModel: SampleViewModel = hiltViewModel()
 
     val navigator = remember(backStack) {
         object : SampleNavigator {
@@ -205,7 +206,7 @@ fun AppNavigation(
         entryProvider = entryProvider {
             sampleGraph(
                 navigator = navigator,
-                sharedViewModel = { hiltViewModel() },
+                sharedViewModel = { sampleViewModel },
             )
         },
         onBack = { backStack.removeLastOrNull() },
