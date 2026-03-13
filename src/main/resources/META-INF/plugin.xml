@@ -1,7 +1,7 @@
 <idea-plugin>
-    <id>app.web.drjacky.BasicComposeActivityPlugin</id>
+    <id>com.github.drjacky.basiccomposeactivityplugin</id>
     <name>Basic Compose Activity</name>
-    <vendor email="nickyp@gmail.com" url="https://drjacky.web.app">Drjacky</vendor>
+    <vendor email="dr.jacky.2005@gmail.com" url="https://drjacky.web.app">drjacky</vendor>
 
     <description><![CDATA[
         Adds a <b>Basic Compose Activity</b> project template to the Android Studio New Project wizard.<br><br>

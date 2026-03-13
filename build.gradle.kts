@@ -4,7 +4,7 @@ plugins {
     id("org.jetbrains.intellij.platform") version "2.12.0"
 }
 
-group = "app.web.drjacky"
+group = "com.github.drjacky.basiccomposeactivityplugin"
 version = "1.0.0"
 
 repositories {
