@@ -9,9 +9,10 @@
 </p>
 
 <p align="center">
-  <a href="https://plugins.jetbrains.com/plugin/XXXXX"><img src="https://img.shields.io/jetbrains/plugin/v/XXXXX?label=Marketplace&logo=jetbrains" alt="JetBrains Marketplace" /></a>
-  <a href="https://github.com/Drjacky/BasicComposeActivityPlugin/blob/main/LICENSE"><img src="https://img.shields.io/github/license/Drjacky/BasicComposeActivityPlugin" alt="License" /></a>
-  <a href="https://github.com/Drjacky/BasicComposeActivityPlugin/releases"><img src="https://img.shields.io/github/v/release/Drjacky/BasicComposeActivityPlugin" alt="Release" /></a>
+  <a href="https://github.com/Drjacky/BasicComposeActivityPlugin/actions"><img src="https://github.com/Drjacky/BasicComposeActivityPlugin/workflows/Release/badge.svg" alt="Build" /></a>
+  <a href="https://plugins.jetbrains.com/plugin/XXXXX-basic-compose-activity"><img src="https://img.shields.io/jetbrains/plugin/v/XXXXX-basic-compose-activity.svg" alt="Version" /></a>
+  <a href="https://plugins.jetbrains.com/plugin/XXXXX-basic-compose-activity"><img src="https://img.shields.io/jetbrains/plugin/d/XXXXX-basic-compose-activity.svg" alt="Downloads" /></a>
+  <a href="https://github.com/Drjacky/BasicComposeActivityPlugin/blob/main/LICENSE.md"><img src="https://img.shields.io/github/license/Drjacky/BasicComposeActivityPlugin" alt="License" /></a>
 </p>
 
 ---
