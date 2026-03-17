@@ -33,8 +33,5 @@ val basicComposeActivityTemplate
         }
 
         recipe = { _: TemplateData ->
-            // All file generation is handled by BasicComposeProjectSetupActivity
-            // after the project opens. This avoids conflicts with Android Studio's
-            // internal rendering pipeline (generateAndroidModule / CommonPluginsInserter).
         }
     }

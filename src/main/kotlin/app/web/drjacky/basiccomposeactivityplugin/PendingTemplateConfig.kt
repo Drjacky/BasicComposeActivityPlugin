@@ -1,12 +1,11 @@
 package app.web.drjacky.basiccomposeactivityplugin
 
 /**
- * Passes template parameters from the wizard UI to the [BasicComposeProjectSetupActivity].
+ * Passes template parameters from the wizard UI to [BasicComposeProjectSetupActivity].
  *
- * The normal recipe pipeline may never execute because Android Studio's internal
- * `generateAndroidModule` can fail before our template recipe runs.  By storing a
- * lazy reference to the package-name parameter we can still retrieve the user's
- * input from the post-startup activity that finishes project generation.
+ * A lazy reference to the package-name parameter is stored when the template
+ * builder runs, so we can retrieve the user's input from the post-startup
+ * activity that finishes project generation.
  */
 object PendingTemplateConfig {
 

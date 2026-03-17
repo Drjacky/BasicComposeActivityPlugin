@@ -37,6 +37,9 @@ class BasicComposeProjectSetupActivity : ProjectActivity {
 
         val projectDir = File(project.basePath ?: return)
 
+        // Not an Android/Gradle project (e.g., IntelliJ "Empty Project")
+        if (!File(projectDir, "gradle.properties").exists()) return
+
         if (File(projectDir, "build-logic/settings.gradle.kts").exists()) return
 
         val projectName = projectDir.name
