@@ -1,14 +1,14 @@
 # GitHub Actions Workflow for testing and preparing the plugin release:
 # - Build the plugin and upload artifact.
 # - Run the plugin verifier.
-# - Create a draft release on push to main.
+# - Create a draft release on push to master.
 #
-# Triggered on push to main and pull requests.
+# Triggered on push to master and pull requests.
 
 name: Build
 on:
   push:
-    branches: [main]
+    branches: [master]
   pull_request:
 
 concurrency:
