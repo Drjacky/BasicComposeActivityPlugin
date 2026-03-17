@@ -1,0 +1,29 @@
+<!-- Keep a Changelog guide -> https://keepachangelog.com -->
+
+# Basic Compose Activity Plugin Changelog
+
+## [Unreleased]
+
+### Fixed
+
+- Building basic compose activity even on a new empty project in IntelliJ
+
+## [1.0.0]
+
+### Added
+
+- Basic Compose Activity template in the New Project wizard under Phone and Tablet
+- Multi-module project generation: `app`, `build-logic/convention`, `core:common`, `core:domain`, `core:ui`, `feature:sample`
+- Jetpack Compose with Material 3 and dynamic color
+- Navigation 3 for type-safe compose navigation
+- Hilt dependency injection with KSP
+- Convention plugins via `build-logic` for shared build configuration
+- Detekt static code analysis with Compose rules
+- Gradle Version Catalog (`libs.versions.toml`) for centralized dependency management
+- Sample two-screen app with list and add screens sharing a single ViewModel
+- Dependencies included: Coil, Lottie, LeakCanary, kotlinx-serialization, and more
+- Plugin signing and JetBrains Marketplace publishing support
+- GitHub Actions workflows for CI build and automated release
+
+[Unreleased]: https://github.com/Drjacky/BasicComposeActivityPlugin/compare/v1.0.0...HEAD
+[1.0.0]: https://github.com/Drjacky/BasicComposeActivityPlugin/commits/v1.0.0
