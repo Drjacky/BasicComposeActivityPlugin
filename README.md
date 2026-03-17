@@ -59,6 +59,9 @@ A generated project with:
 2. Under **Phone and Tablet**, select **Basic Compose Activity**
 3. Configure your package name and project name
 4. Click **Finish** -- the multi-module project is generated and Gradle sync starts automatically
+<p align="left">
+  <img src="art/new-project.png" width="300" height="300" alt="New Project" />
+</p>
 
 ## Contributing
 
