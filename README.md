@@ -49,7 +49,7 @@ A generated project with:
 ### From ZIP (local)
 
 1. Clone and build: `./gradlew buildPlugin`
-2. The ZIP is at `build/distributions/BasicComposeActivityPlugin-1.0.0.zip`
+2. The ZIP is at `build/distributions/BasicComposeActivityPlugin-x.y.z.zip`
 3. In Android Studio, go to **Settings** > **Plugins** > gear icon > **Install Plugin from Disk...**
 4. Select the ZIP and restart
 
