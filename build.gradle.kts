@@ -36,8 +36,14 @@ intellijPlatform {
         }
 
         changeNotes = """
+            <h3>Fixed</h3>
             <ul>
-                <li>Fix: Prevent plugin from triggering on non-Android projects</li>
+                <li>Prevent plugin from triggering on non-Android projects (e.g., IntelliJ "Empty Project")</li>
+            </ul>
+            <h3>Added</h3>
+            <ul>
+                <li>GitHub Actions build workflow with plugin verification and draft release</li>
+                <li>IntelliJ IDEA run configuration for testing</li>
             </ul>
         """.trimIndent()
     }

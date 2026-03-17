@@ -4,9 +4,17 @@
 
 ## [Unreleased]
 
+## [1.0.1] - 2026-03-17
+
 ### Fixed
 
 - Prevent plugin from triggering on non-Android projects (e.g., IntelliJ "Empty Project")
+
+### Added
+
+- GitHub Actions build workflow with plugin verification and draft release
+- IntelliJ IDEA run configuration for testing
+- CHANGELOG.md
 
 ## [1.0.0]
 
