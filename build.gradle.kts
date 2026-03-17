@@ -7,7 +7,7 @@ plugins {
 }
 
 group = "com.github.drjacky.basiccomposeactivityplugin"
-version = "1.0.0"
+version = "1.0.1"
 
 repositories {
     mavenCentral()
@@ -36,7 +36,9 @@ intellijPlatform {
         }
 
         changeNotes = """
-            Initial version
+            <ul>
+                <li>Fix: Prevent plugin from triggering on non-Android projects</li>
+            </ul>
         """.trimIndent()
     }
 

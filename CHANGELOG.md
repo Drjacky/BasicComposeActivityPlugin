@@ -6,7 +6,7 @@
 
 ### Fixed
 
-- Building basic compose activity even on a new empty project in IntelliJ
+- Prevent plugin from triggering on non-Android projects (e.g., IntelliJ "Empty Project")
 
 ## [1.0.0]
 
@@ -25,5 +25,6 @@
 - Plugin signing and JetBrains Marketplace publishing support
 - GitHub Actions workflows for CI build and automated release
 
-[Unreleased]: https://github.com/Drjacky/BasicComposeActivityPlugin/compare/v1.0.0...HEAD
+[Unreleased]: https://github.com/Drjacky/BasicComposeActivityPlugin/compare/v1.0.1...HEAD
+[1.0.1]: https://github.com/Drjacky/BasicComposeActivityPlugin/compare/v1.0.0...v1.0.1
 [1.0.0]: https://github.com/Drjacky/BasicComposeActivityPlugin/commits/v1.0.0
