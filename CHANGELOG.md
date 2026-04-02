@@ -4,6 +4,12 @@
 
 ## [Unreleased]
 
+## [1.0.2] - 2026-04-02
+
+### Added
+
+- Support IntelliJ IDEA 2026.1+
+
 ## [1.0.1] - 2026-03-17
 
 ### Fixed
@@ -33,6 +39,7 @@
 - Plugin signing and JetBrains Marketplace publishing support
 - GitHub Actions workflows for CI build and automated release
 
-[Unreleased]: https://github.com/Drjacky/BasicComposeActivityPlugin/compare/v1.0.1...HEAD
+[Unreleased]: https://github.com/Drjacky/BasicComposeActivityPlugin/compare/v1.0.2...HEAD
+[1.0.1]: https://github.com/Drjacky/BasicComposeActivityPlugin/compare/v1.0.1...v1.0.2
 [1.0.1]: https://github.com/Drjacky/BasicComposeActivityPlugin/compare/v1.0.0...v1.0.1
 [1.0.0]: https://github.com/Drjacky/BasicComposeActivityPlugin/commits/v1.0.0
