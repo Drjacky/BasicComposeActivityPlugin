@@ -7,7 +7,7 @@ plugins {
 }
 
 group = "com.github.drjacky.basiccomposeactivityplugin"
-version = "1.0.1"
+version = "1.0.2"
 
 repositories {
     mavenCentral()
@@ -32,7 +32,7 @@ intellijPlatform {
     pluginConfiguration {
         ideaVersion {
             sinceBuild = "241"
-            untilBuild = "253.*"
+            //untilBuild = "253.*"
         }
 
         changeNotes = """
